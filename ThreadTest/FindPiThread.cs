@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Threading;
 
 //For Test: Wizards, Orthagonality, Pride and Predijuce Chapter, Databases in WPF, software development life cycle(waterfall), structual/behavior patt
-//UMLS, Creational?????
+//UMLS, Creational??????
 
 namespace ThreadTest
 {
