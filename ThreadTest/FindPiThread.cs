@@ -5,8 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-//For Test: Wizards, Orthagonality, Pride and Predijuce Chapter, Databases in WPF, software development life cycle(waterfall), structual/behavior patt
-//UMLS, Creational??????
 
 namespace ThreadTest
 {
@@ -27,14 +25,18 @@ namespace ThreadTest
 
         public void throwDart()
         {
-            double x = throws.NextDouble();
-            double y = throws.NextDouble();
+            
 
             for (int i = 0; i < dartsToThrow; i++)
             {
-                if (1 <= ((x * x) + (y * y)))
+                double x = throws.NextDouble();
+                double y = throws.NextDouble();
+
+                if (((x * x) + (y * y)) <= 1)
                 {
-                    dartsLanded += 1;
+                    //Console.WriteLine("x: {0}", x[i]);
+                    //Console.WriteLine("y: {0}", y[i]);
+                    dartsLanded ++;
                 }
             }
             

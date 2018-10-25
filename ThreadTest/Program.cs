@@ -47,13 +47,17 @@ namespace ThreadTest
 
             for(int i = 0; i < findPiList.Count; i++)
             {
-                Console.WriteLine("get landed: {0}", findPiList[i].getLanded());
                 dartsInside += findPiList[i].getLanded();
             }
 
-            double pi = (4 * ((dartsInside) / (darts)));
+            FindPiThread test = new FindPiThread(darts);
 
-            Console.WriteLine("Darts Inside: {0} Darts: {1} Pi: {2}", dartsInside, darts, pi);
+            test.throwDart();
+            dartsInside = test.getLanded();
+
+            double pi = 4 * ((double)dartsInside / (double)darts);
+
+            Console.WriteLine("Pi: {0}", pi);
 
             Console.ReadKey();
 
